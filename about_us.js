@@ -127,5 +127,7 @@ function change_ex(){
         "branch",
         JSON.stringify(["write_ex"])
     )
-
+    ex_about_us[0]["context"][selected_index].push(write_data);
+    ex_about_us[0]["context"][selected_index].push(write_data);
+    //飽きた。あとはがんばれ
 }
