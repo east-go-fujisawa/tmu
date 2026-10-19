@@ -34,7 +34,7 @@ function auth_check(){
     .then(json =>{
         console.log(json);
         //ここのif分岐がうまくいってない
-        if(json["result"] == "success" && json["state"]){
+        if(json["result"] == "success" && json["state"] == 1){
             //alert("ログインしました");
             state = json['state'];
             document.getElementById("usr_name").innerHTML = username;
@@ -43,21 +43,21 @@ function auth_check(){
         }else{
             loading_status = "stop";
             alert("ログインに失敗しました");
-            location.href="login.html";
+            location.replace="login.html";
         }
     })
     .catch(err=>{
         console.log(err);
         loading_status = "stop";
         alert("ログインに失敗しました2");
-        location.href = "login.html";
+        location.replace = "login.html";
     })
     console.log(param);
     }catch(err){
         console.log(err);
         loading_status = "stop";
         alert("ログインに失敗しました。");
-        location.href = "login.html";
+        location.replace = "login.html";
     }
 }
 
