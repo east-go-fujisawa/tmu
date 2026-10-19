@@ -63,3 +63,46 @@ function next(num){
         document.getElementById("nt_bt").style.display = "none";
     }
 }
+
+var ex_about_us = "";
+function explaination_get(){
+    var formdata = new FormData();
+    var branch = ["get_ex"];
+
+    formdata.append(
+        "branch",
+        JSON.stringify(formdata)
+    )
+
+    fetch("explain.json",{
+        "method":"post",
+        "body":formdata
+    })
+    .then(resjson =>{
+        if(resjson.ok){
+            return resjson.json()
+        }
+    })
+    .then(json =>{
+        console.log(json);
+        ex_about_us = json;
+    })
+    .catch(err =>{
+        console.log(err);
+        alert("読み込みエラーが発生しました");
+    })
+}
+
+function write_ex(){
+    var count = -1;
+    var html_text = '<select id="ex_se">';
+    for(var intro of ex_about_us[0]["intro"]){
+        html_text+='<option value="'+intro+'">'+intro+'</option>';
+    }
+    html_text+='</select>';
+
+}
+function change_ex(){
+    var write_data = document.getElementById("text_ex").value();
+
+}
