@@ -102,13 +102,30 @@ function write_ex(){
     html_text+='</select>';
     document.getElementById("write_exp").insertAdjacentHTML("beforeend",html_text); //Not defined this id
 }
-
+var selected_index = "";
 document.getElementById("ex_se").addEventListener("change",()=>{
-    var selected_index = document.getElementById("ex_se")[document.getElementById("ex_se").selected].value; //ミスってる説ある 10/19
+     selected_index = document.getElementById("ex_se")[document.getElementById("ex_se").selected].value; //ミスってる説ある 10/19
     document.getElementById("change_photo").src = ex_about_us[0]["photo"][selected_index];
     document.getElementById("change_content").value = ex_about_us[0]["content"][selected_index];
 })
+
+document.getElementById("put_photo").addEventListener("change",()=>{
+    document.getElementById("change_photo").src = btoa(document.getElementById("put_photo").files[0]);
+})
+
 function change_ex(){
-    var write_data = document.getElementById("text_ex").value();
+    var write_data = document.getElementById("change_content").value;
+    if(selected_index){
+        var post_photo = document.getElementById("put_photo").files[0];
+        var file_path = post_photo.name;
+    }else{
+        var file_path =  ex_about_us[0]["photo_path"][selected_index];
+    }
+
+    var formdata = new formdata();
+    formdata.append(
+        "branch",
+        JSON.stringify(["write_ex"])
+    )
 
 }
