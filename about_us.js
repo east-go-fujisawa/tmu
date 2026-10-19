@@ -96,12 +96,18 @@ function explaination_get(){
 function write_ex(){
     var count = -1;
     var html_text = '<select id="ex_se">';
-    for(var intro of ex_about_us[0]["intro"]){
+    for(var intro of ex_about_us[0]["intro"]){ //Not defined this name
         html_text+='<option value="'+intro+'">'+intro+'</option>';
     }
     html_text+='</select>';
-
+    document.getElementById("write_exp").insertAdjacentHTML("beforeend",html_text); //Not defined this id
 }
+
+document.getElementById("ex_se").addEventListener("change",()=>{
+    var selected_index = document.getElementById("ex_se")[document.getElementById("ex_se").selected].value; //ミスってる説ある 10/19
+    document.getElementById("change_photo").src = ex_about_us[0]["photo"][selected_index];
+    document.getElementById("change_content").value = ex_about_us[0]["content"][selected_index];
+})
 function change_ex(){
     var write_data = document.getElementById("text_ex").value();
 
