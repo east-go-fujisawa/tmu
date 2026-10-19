@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
+      <link rel="stylesheet" href="write_news.css"></link>
+        <title>東京都立大学航空部　ユーザー編集</title>
+    </head>
+    <body onload="auth_check()">
+        <section class="top" id="top" onclick='back()'>
+            <img src="012.jpg"><h1>東京都立大学航空部 ユーザー編集ページ</h1>
+        </section>
+    <div class="bl1" id="bl1">
+    <h1>新規ユーザー登録</h1>
+        <div class="block1">
+        <p>ユーザー名</p>
+        <input type="text" id="register_username" value="" placeholder = "username">
+        </div>
+        <div class="block1">
+        <p>パスワード</p>
+        <input type="password" id="register_password" value="" placeholder = "password">
+        </div>
+        <div class="block1">
+        <p>権限</p>
+        <input type="number" id="register_state" value="" placeholder = "3">
+        </div>
+        <button onclick="register()">登録</button>
+    </div>
+    <div class="bl1" id="bl1">
+    <h1>登録情報変更</h1>
+        <div class="block1">
+        <p>ユーザー名</p>
+        <p class="usr_name" id="usr_name"></p>
+        </div>
+        <div class="block1">
+        <p>パスワード</p>
+        <input type="password" id="cha_password" value="" placeholder = "password">
+        </div>
+        <div class="block1">
+        <p>権限</p>
+        <input type="number" id="cha_state" value="" placeholder = "3">
+        </div>
+        <button onclick="change()">変更</button>
+    </div>
+    <div class="loading" id="loading"><p class="l_text" id="l_text">Loading...</p></div>
+    <style>
+        .bl1{
+            margin-left:5vw;
+        }
+        .bl1 a{
+            width:10vw;
+            height:4vw;
+            text-align: center;
+            line-height: 4vw;
+            color:white;
+            margin:1vw;
+            font-size:15px;
+            background-color: #4366B0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        div{
+            display: inline-block;
+            margin:10px;
+        }
+        input{
+            width:300px;
+            height:40px;
+            font-size:15px;
+            border:none;
+            outline:none;
+            padding:5px;
+            letter-spacing: 0.05em;
+        }
+        button{
+            width:80px;
+            height:50px;
+            padding:5px;
+            font-size:15px;
+            background-color: #4366B0;
+            color:white;
+            text-align: center;
+            outline: none;
+            border:none;
+            vertical-align: middle;
+        }
+        button:hover{
+            background-color: #4366b083;
+        }
+
+        .loading{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100vw;
+            height: 100vh;
+            padding:0;
+            margin:0;
+            text-align:center;
+            line-height:100vh;
+            font-size:20px;
+            font-weight:600;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index:1000;
+            display: none;
+            opacity: 0;
+        }
+        .l_text{
+            display: none;
+            opacity: 0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="user_authority.js"></script>
+    </body>
+</html>

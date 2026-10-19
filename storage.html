@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+<body onload="get_information()">
+<style>
+    .block_ins{
+        width:80vw;
+        
+    }
+    .upload_f{
+        width:80vw;
+        height:40px;
+        display: inline-block;
+        border:1px solid rgb(192, 193, 194);
+        margin:0;
+        padding: 0;
+    }
+    .upload_f div{
+        display: inline-block;
+        margin-left:5px;
+        background-color: lightgray;
+        border-radius:30px;
+        font-size: 12.5px;
+        height:20px;
+        line-height: 20px;
+        width:10vw;
+        text-align: center;
+    }
+    .upload_f .file_size{
+        width:20vw;
+        height:40px;
+        line-height: 40px;
+        padding:0;
+        margin:0;
+
+        margin-right:10vw;
+        
+    }
+    .upload_f .file_name{
+        height:40px;
+        line-height:30px;
+        width:30vw;
+        text-align: left;
+        font-size:15px;
+        border:none;
+        outline: none;
+        background-color: rgb(232, 232, 232);
+        margin:0;
+        padding: 0;
+        padding-left: 10px;
+    }
+    .dir1{
+        width:80vw;
+        margin:0;
+        padding:0;
+
+    }
+    .dir1 div{
+        display: block;
+    }
+    .dir1 .top{
+        width:80vw;
+        height:40px;
+    }
+    .dir1 .top div{
+        display: inline-block;
+    }
+    .dir1 .content p{
+        width:80vw;
+        height:40px;
+        display: block;
+        margin-bottom:10px;
+        background-color: lightgray;
+    }
+</style>
+<input type="file" id="upload_files" value="" multiple>
+<button onclick="storage()">Add</button>
+<div class="block_ins" id="block_ins"></div>
+
+<!--test1-->
+<div class="upload_f" id="upload_f">
+    <input type="text" class="file_name" id="file_name" value="testtesttesttesttesttesttesttest.pdf">
+    <small class="file_size" id="file_size">1111111111111B</small>
+    <div class="directory" id="directory">保存先を選ぶ</div>
+    <div class="file_delete" id="file_delete">削除</div>
+</div>
+<!--test1 fin-->
+
+<!--test2-->
+
+<div class="dir1" id="dir1">
+    <div class="top" id="top">
+        <div class="block1" id="block1">uploads</div>
+        <div class="block1" id="block2">N/A</div>
+        <div class="block1" id="block3">N/A</div>
+        <div class="block1" id="block4">N/A</div>
+        <div class="block1" id="block5">N/A</div>
+    </div>
+    <div class="content" id="content">
+        <p class="ct" id="ct1">n/a.json</p>
+        <p class="ct" id="ct2">n/a</p>
+    </div>
+</div>
+<!--test2 fin-->
+<script src="storage.js"></script>
+</body>
+</html>

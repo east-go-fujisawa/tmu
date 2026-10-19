@@ -1,0 +1,234 @@
+body{
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    border-left:10px solid #4366B0;
+    text-align: left;
+    line-height:50px;
+    font-size:20px;
+    font-weight: 400; 
+    padding: 0;
+    padding-left:10px;
+     font-family: 'Now', sans-serif;
+     font-family:YakuHanJPs_Narrow,'Noto Serif JP', "Hiragino Mincho ProN", YuMincho, "Yu Mincho", "serif";
+}
+
+h2{
+    font-size:20px;
+    font-weight: 400;
+    font-family:YakuHanJPs_Narrow,'Noto Serif JP', "Hiragino Mincho ProN", YuMincho, "Yu Mincho", "serif";
+}
+p{
+    margin:0;
+    font-family: YakuHanJPs_Narrow, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Custom Yu Gothic", "Yu Gothic Medium", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif;
+}
+section{
+    vertical-align: top;
+    display: inline-block;
+}
+.top{
+    width:98vw;
+    height:10vh;
+    margin:0;
+    padding:1vw;
+    background-color: white;
+    box-shadow: 0 0 2px 30px #fafafa;
+}
+.top h1{
+    display: inline-block;   
+    height:10vh;
+    font-size:25px;
+    line-height:10vh;
+    letter-spacing: 3px;
+    font-weight: 650;
+    border: none;
+    vertical-align: top;
+    background-color: white;
+    margin:0;
+    padding:0;
+    font-family: YakuHanJPs_Narrow, 'Noto Serif JP', "Hiragino Mincho ProN", YuMincho, "Yu Mincho", "serif";
+}
+/*#6D96CE  #4366B0*/
+.top img{
+    height:10vh;
+    width:auto;
+    
+}
+.pre{   
+    margin:0;
+    margin-left:1vw;
+    padding:0;
+    width:45vw;
+}
+.pre h1{
+    padding-left:2vw;
+}
+
+.result{
+    position: relative;
+    margin:0;
+    padding:0;
+    width:45vw;
+}
+.result h1{
+    padding-left:2vw;
+}
+.result h2{
+    font-weight: 600;
+}
+.result pre{
+    position: absolute;
+    right: 5vw;
+    margin:0;
+    padding:0;
+    padding-left:15px;
+    padding-right:15px;
+    display: inline-block;
+    background-color: #4366B0;
+    color:white;
+    font-size:15px;
+    border-radius: 100px;
+    vertical-align:text-top;
+    transition: right linear 0.2s;
+}
+.result pre:hover{
+    right:4vw;
+}
+.head_area{
+    vertical-align: top;
+    
+}
+.head_area p{
+margin:0;
+padding:0;
+font-size:15px;
+}
+.head_area input{
+    vertical-align:top;
+    height:7vh;
+    line-height: 7vh;
+    margin:0;
+    margin-left:2vw;
+    padding: 0;
+    border:1px solid gray;
+}
+.mendoi{
+    width:20vw;
+}
+.head_area div{
+    display: inline-block;
+    vertical-align: top;
+    margin:10px;
+}
+.head_area .art_ti p{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    
+    width:100px;
+    height:7vh;
+    padding:0;
+    margin:0;
+    text-align: center;
+    line-height:7vh;
+    letter-spacing: 1px;
+}
+textarea{
+    width:40vw;
+    height:20vh;
+      white-space: pre-wrap;
+}
+.body input{
+    background-color: white;
+
+}
+.body button{
+    position: relative;
+    right:0;
+    width:3vw;
+    height:3vw;
+    background-color: #4366B0;
+    color:white;
+    border:none;
+    border-radius: 100px;
+    outline:none;
+    display: block;
+    /*box-shadow: 0 0 2px 2px #eaeaea;*/
+    transition: width linear 0.2s,height linear 0.2s, margin-top linear 0.2s;
+}
+.body button:hover{
+    margin-top:-0.1vw;
+    width:3.2vw;
+    height:3.2vw;
+}
+.body .btt h3{
+    margin:0;
+    margin-right:1vw;
+    font-weight: 400;
+    font-size:1vw;
+    padding: 0;
+    height:3vw;
+    line-height: 3vw;;
+    font-family: YakuHanJPs_Narrow, 'Noto Serif JP', "Hiragino Mincho ProN", YuMincho, "Yu Mincho", "serif";
+    transition:margin-left linear 0.2s,margin-right linear 0.2s;    
+}
+.body .btt h3:hover{
+    font-weight: 600;
+    margin-right:0.5vw;
+    margin-left:0.5vw;
+}
+.body .btt{
+    display: flex;
+    margin-top:1vh;
+    vertical-align: baseline;
+}
+img{
+    width:40vw;
+    height: auto;
+}
+
+.insert_area p{
+    font-size: 12.5px;
+}
+.insert_area p:hover{
+    color: #4366B0;
+    
+}
+
+.check{
+    position: relative;
+    left:1vw;
+    margin:0;
+    padding:0;
+    width:90vw;
+}
+.check h1{
+    padding-left:2vw;
+}
+.check .pres{
+    position:absolute;
+    right: 0;
+    width:max-content;
+    display: inline-block;
+    vertical-align: top;
+}
+.check .pres pre{
+    margin:0;
+    margin-left:1vw;
+    padding:0;
+    padding-left:15px;
+    padding-right:15px;
+    display: inline-block;
+    background-color: #4366B0;
+    color:white;
+    font-size:15px;
+    border-radius: 100px;
+    vertical-align:top;
+    transition: right linear 0.2s;
+}
+.check pre:hover{
+    right:4vw;   
+}

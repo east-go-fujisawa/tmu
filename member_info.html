@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
+      <link rel="stylesheet" href="member_info.css"></link>
+    </head>
+    <body onload="auth_check()">
+        <section class="top" id="top" onclick="back()">
+            <img src="012.jpg"><h1>東京都立大学航空部 メンバー編集ページ</h1>
+        </section>
+        <div class="new_member" id="new_member">
+            <h2>メンバー追加<button id="regi_bt" onclick="register()">登録</button></h2>
+            <div>
+            <p>名前</p>
+            <input type="text" id="member_name" placeholder="都立太郎" value="">
+            </div><div>
+            <p>Name</p>
+            <input type="text" id="member_name_en" placeholder="ToritsuTarou" value="">
+            </div><div>
+            <p>学年</p>
+            <input type="text" id="grade" placeholder="B1" value="">            
+            </div><div>
+            <p>役職</p>
+            <input type="text" id="status" placeholder="機体係・首相" value="">
+            </div><div>
+            <p>学科</p>
+            <input type="text" id="major" placeholder="航空宇宙" value="">
+            </div><div>
+            <p>出身</p>
+            <input type="text" id="birthplace" placeholder="神奈川県" value="">
+            </div><div>
+            <p>資格</p>
+            <input type="text" id="license" placeholder="自家用操縦士" value="">
+            </div><div>
+            <p>紹介文</p>
+            <textarea id="intro" value=""></textarea>
+            </div><div>
+            <p>写真</p>
+            <input type="file" id="up_pic">
+            </div>
+        </div>
+        <div class="member_change" id="member_change">
+            <h2>メンバー編集</h2>
+            <select id="members">
+                <option value="test">test</option>
+            </select>
+        </div>
+        <script src="member_info.js"></script>
+    </body>
+</html>

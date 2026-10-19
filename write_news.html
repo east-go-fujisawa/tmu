@@ -1,0 +1,100 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.cdnfonts.com/css/now" rel="stylesheet">
+      <link rel="stylesheet" href="write_news.css"></link>
+    </head>
+    <body onload="auth_check()">
+        <section class="top" id="top" onclick="back()">
+            <img src="012.jpg"><h1>東京都立大学航空部 ブログ投稿ページ</h1>
+        </section>
+        <section class="pre" id="pre">
+            <h1>編集ページ</h1>
+            <div class="head_area" id="head_area">
+                
+                <div class="art_ti" id="art_ti">
+                    <p>記事名</p>
+                    <input type="text" id="art_ti_in"class="mendoi" value="">
+                </div>
+                <div class="art_ti" id="art_ti">
+                    <p>合宿期間</p>
+                    <input type="date" id="art_date_from" value="">
+                    <small>から</small>
+                    <input type="date" id="art_date_to" value="">
+                    <small>まで</small>
+                </div>
+                <div class="art_ti" id="art_ti">
+                    <p>掲載日</p>
+                    <input type="date" id="art_date_post" value="">
+                </div>
+                <div class="art_ti" id="art_ti">
+                <!--div class="categ"-->
+                <p>カテゴリー</p>
+                <select name="cate" id="categ">
+                    <option>選択してください</option>
+                    <option value="合宿報告">合宿報告</option>
+                    <option value="新勧">新勧</option>
+                    <option value="その他">その他</option>
+                </select>
+                <!--/div-->                
+            </div>
+            <div class="body" id="body">
+                <h2>本文記述</h2>
+                <textarea id="text_write" value=""></textarea>
+                <div class="btt" id="vtt">
+                <h3>テキスト追加</h3>
+                <button id="set_text">＞</button>
+                </div>
+                
+                <h2>画像</h2>
+                <input type="file" id="up_pic">
+                <div class="btt" id="btt">
+                <h3>画像追加</h3>
+                <button id="set_pic">＞</button>
+                </div>
+            </div>
+        </section>
+        <section class="result" id="result">
+            <h1>完成ページ <pre id="pre_bt" onclick="pre_send()">投稿</pre></h1>
+            <header class="post-info">
+                <h2 class="post-title" id="post-title"></h2>
+                <p class="post-date" id="post-date"><span></span></p>
+                <p class="post-cat" id="post-cat"></p>
+                <p class="post-cate" id="post-cate"></p><!--デザイン変えないと-->
+            </header>
+            <div class="insert_area" id="insert_area"></div>
+        </section>
+        <section class="delete" id="delete">
+            <h1>削除ページ<pre id="dl_bt" onclick="delete_data()">削除</pre></h1>
+            <div class="select_area" id="select_area">
+            </div>
+        </section>
+        <div class="loading" id="loading"><p class="l_text" id="l_text">Loading...</p></div>
+        <style>
+            .loading{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100vw;
+            height: 100vh;
+            padding:0;
+            margin:0;
+            text-align:center;
+            line-height:100vh;
+            font-size:20px;
+            font-weight:600;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index:1000;
+            display: none;
+            opacity: 0;
+        }
+        .l_text{
+            display: none;
+            opacity: 0;
+        }
+        </style>
+        <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+        <script src="write_news.js"></script>
+    </body>
+</html>
